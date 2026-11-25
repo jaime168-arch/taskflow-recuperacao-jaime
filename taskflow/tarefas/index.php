@@ -90,7 +90,11 @@ require '../includes/header.php';
                     <td>
                         <a class="btn gray" href="form.php?id=<?= (int)$t['id'] ?>">Editar</a>
 
-                        <a class="btn red" href="excluir.php?id=<?= (int)$t['id'] ?>">Excluir</a>
+                        <a class="btn red"
+                        href="excluir.php?id=<?= (int)$t['id'] ?>"
+                        onclick="return confirm('Tem certeza que deseja excluir esta tarefa?')">
+                            Excluir
+                        </a>    
                     </td>
                 </tr>
 
